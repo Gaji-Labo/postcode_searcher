@@ -1,6 +1,7 @@
 class PostcodeController < ApplicationController
 
   def search
-    render text: "OK"
+    postcode = Postcode.search(params[:postcode])
+    render json: postcode.to_json
   end
 end
