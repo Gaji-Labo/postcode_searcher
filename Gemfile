@@ -44,3 +44,4 @@ end
 
 gem 'rails-assets-underscore'
 gem 'rails-assets-backbone'
+gem 'rails-assets-jquery-mockjax'
