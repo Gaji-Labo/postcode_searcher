@@ -24,5 +24,11 @@ RSpec.describe PostcodeController, type: :controller do
       json = JSON.parse(response.body)
       expect(json["message"]).to match("not found.")
     end
+
+    it "postcode matcher" do
+      get :search, postcode: "103-0"
+      json = JSON.parse(response.body)
+      expect(json.size).to match(23)
+    end
   end
 end
